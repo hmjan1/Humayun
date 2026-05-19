@@ -1,0 +1,27 @@
+# 🎮 BD Casual Gaming Platform Backend
+
+A high-performance, real-time casual gaming and entertainment platform backend architecture tailored for high-concurrency environments. This platform focuses entirely on free-to-play skill games, engagement rewards, and secure point-based leaderboards.
+
+## 🚀 Tech Stack
+
+- **Runtime:** Node.js with TypeScript
+- **Framework:** Express.js
+- **Database ORM:** Prisma with PostgreSQL (Atomic transactions)
+- **Caching & Real-time State:** Redis (Sorted Sets for leaderboards)
+- **Communication Layer:** Socket.io (WebSockets)
+
+## 🛠️ Features Implemented
+
+- **Atomic Wallet System:** Isolated transactions to manage virtual points safely without race conditions.
+- **Real-Time State Machine:** Scalable WebSocket integration via Socket.io for immediate win/loss broadcasts.
+- **Optimized for Mobile:** Database schemas indexed tightly for quick mobile phone and OTP lookups.
+- **CSPRNG Verification:** Cryptographically secure pseudo-random number generator structure logic.
+
+## 📦 Environment Setup Preview
+
+Create a `.env` file in the root directory and add:
+```env
+DATABASE_URL="postgresql://username:password@localhost:5432/game_db?schema=public"
+REDIS_URL="redis://localhost:6379"
+PORT=5000
+ALLOWED_ORIGINS="*"
